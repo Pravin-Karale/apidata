@@ -89,7 +89,7 @@ const List = () => {
                     <select className="form-control form-control-sm"
                         onChange={e => getProducts(e.target.value)} onClick={()=>setShow(true)}>
                         <option>None Selected</option>
-                        {list.map(item => <option key={item} value={item}>{item}</option>)}
+                        {list.map(item => <option key={item.slug} value={item.slug}>{item.slug}</option>)}
                     </select>
                 </div>
             </form>
@@ -135,7 +135,6 @@ const List = () => {
                         </li>
                     </ul>
                 </nav>:null}
-
                 <div className='container'>
                     {popup ?
                         <div className='main'>
